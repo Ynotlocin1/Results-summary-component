@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "Hanken Grotesk";
+    src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format(truetype);
+    font-weight: 500, 700, 800;
+}
+
+:root {
+    /* Primary colors */
+    --lightred :hsl(0, 100%, 67%);
+    --orangeyyellow :hsl(39, 100%, 56%);
+    --greenteal :hsl(166, 100%, 37%);
+    --cobaltblue :hsl(234, 85%, 45%);
+
+    /* Primary colors bg*/
+    --lightredbg :hsl(0, 100%, 67%,0.05);
+    --orangeyyellowbg :hsl(39, 100%, 56%,0.05);
+    --greentealbg :hsl(166, 100%, 37%,0.05);
+    --cobaltbluebg :hsl(234, 85%, 45%,0.05);
+
+    /* Gradients*/
+
+    --lightsalteblue :hsl(252, 100%, 67%);
+    --lightroyalblue :hsl(241, 81%, 54%);
+
+    --violetblue :hsla(256, 72%, 46%, 1);
+    --persianblue :hsla(241, 72%, 46%, 0);
+
+    /* Neutral colors*/
+
+    --white :hsl(0, 0%, 100%);
+    --paleblue :hsl(221, 100%, 96%);
+    --lightlavender :hsl(241, 100%, 89%);
+    --darkgrayblue :hsl(224, 30%, 27%);
+
+
+}
+
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Hanken Grotesk;
+    background-color: var(--white);
+    min-height: 800px;
+    
+}
+
+main {
+    background-color: var(--white);
+
+    max-width: 375px;
+    margin: 0rem auto;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.your-result {
+    background: linear-gradient(var(--lightsalteblue),var(--lightroyalblue)
+    );
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 3rem 2rem 3rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+
+
+}
+
+.your-result h2 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--lightlavender);
+    padding-bottom: 1.5rem;
+}
+
+.score {
+    background: linear-gradient(var(--violetblue),var(--persianblue));
+    padding: 1.5rem;
+    border-radius: 75rem;
+    min-width: 140px;
+    min-height: 140px;
+
+}
+
+.score h1 {
+    color: var(--white);
+    font-size: 3.2rem;
+}
+
+.score p {
+    color: var(--lightlavender);
+}
+
+.your-result h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-top: 1.4rem;
+}
+
+.result-explanation {
+    color: var(--lightlavender);
+    padding-top: 1rem;
+}
+
+.summary {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+h4 {
+    font-size: 1.2rem;
+    padding-bottom: 0.3rem;
+}
+
+.reaction, .memory, .verbal, .visual {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+
+}
+
+.reaction {
+    background-color: var(--lightredbg);
+    color: var(--lightred);
+    font-weight: 600;
+}
+
+.memory {
+    background-color: var(--orangeyyellowbg);
+    color: var(--orangeyyellow);
+    font-weight: 600;
+}
+
+
+.verbal {
+    background-color: var(--greentealbg);
+    color: var(--greenteal);
+    font-weight: 600;
+}
+
+.visual {
+    background-color: var(--cobaltbluebg);
+    color: var(--cobaltblue);
+    font-weight: 600;
+
+}
+.icon-text {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.icon-text p {
+    padding-left: 1rem;
+}
+
+.summary-score {
+    word-spacing: 0.3rem;
+    color: var(--darkgrayblue);
+}
+
+.summary-score span {
+    color: grey;
+}
+
+.button {
+    padding-top: 1.5rem;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    text-align: center;
+    padding: 1.2rem;
+    border-radius: 3rem;
+    background-color: var(--darkgrayblue);
+
+}
+
+a:hover {
+    background: linear-gradient(var(--lightsalteblue), var(--lightroyalblue));
+
+}
+
+
+@media screen and (min-width :900px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        min-width: 730px;
+        box-shadow: 10px 10px 35px rgba(45, 171, 230, 0.15);
+        border-radius: 2rem;
+    }
+
+    .your-result,.summary {
+        min-width: 365px ;
+        border-radius: 2rem;
+    }
+
+  
+
+
+}
